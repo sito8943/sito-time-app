@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+/**
+ *
+ * @param {string} time
+ * @returns {number} result
+ */
 function hhmmToHours(time) {
   const [hh, mm] = time.split(":").map(Number); // Separar y convertir a números
   return hh + mm / 60; // Convertir minutos a fracción de hora
@@ -11,7 +16,7 @@ function TimeToReal() {
 
   async function calculate() {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setResult(hhmmToHours(value));
+    setResult(hhmmToHours(value).toFixed(2));
   }
 
   return (
