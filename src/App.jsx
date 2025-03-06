@@ -6,8 +6,8 @@ import RealToTime from "./tabs/RealToTime";
 import SumTime from "./tabs/SumTime";
 
 const tabs = {
-  toReal: 0,
-  toTime: 1,
+  realToTime: 0,
+  timeToReal: 1,
   sumTime: 2,
 };
 
