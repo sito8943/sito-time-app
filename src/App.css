@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+main {
+  background-color: #1b1b1b;
+}
+
+main h1,
+main h2,
+main p {
+  @apply text-white;
+}
