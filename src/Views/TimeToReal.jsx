@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 /**
  *
@@ -11,6 +12,8 @@ function hhmmToHours(time) {
 }
 
 function TimeToReal() {
+  const { t } = useTranslation();
+
   const [result, setResult] = useState("");
   const [value, setValue] = useState("");
 
@@ -21,9 +24,7 @@ function TimeToReal() {
 
   return (
     <main className="flex flex-col gap-5 mt-5">
-      <h2 className="text-xl">
-        Introduce la cantidad de horas en formato hh:mm.
-      </h2>
+      <h2 className="text-xl">{t("_pages:time-to-real.title")}</h2>
 
       <form
         className="flex items-center justify-start w-full"
@@ -33,15 +34,15 @@ function TimeToReal() {
         }}
       >
         <input
-          className="bg-blue-500 text-gray-100 px-4 py-1 flex-1"
+          className="input"
           onChange={(e) => setValue(e.currentTarget.value)}
-          placeholder="Horas (Ej: 01:30)"
+          placeholder={t("_pages:time-to-real.input.placeholder")}
         />
         <button
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 cursor-pointer text-gray-100 hover:text-white px-4 py-1"
         >
-          Calculate
+          {t("_accessibility:buttons.calculate")}
         </button>
       </form>
       <p className="w-full px-1">Resultado: {result}</p>

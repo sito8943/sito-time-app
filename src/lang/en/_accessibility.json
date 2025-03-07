@@ -1,10 +1,9 @@
 {
   "buttons": {
-    "contact": "",
-    "toTop": "To Top",
     "openMenu": "Open Menu",
     "closeMenu": "Close menu",
-    "submit": "Submit"
+    "submit": "Submit",
+    "calculate": "Calculate"
   },
   "labels": {},
   "tooltips": {},

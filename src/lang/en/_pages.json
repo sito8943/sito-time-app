@@ -3,7 +3,11 @@
     "title": "Home"
   },
   "time-to-real": {
-    "title": "Time to real"
+    "title": "Time to real",
+    "input": {
+      "tooltip": "Introduce la cantidad de horas en formato hh:mm.",
+      "placeholder": "Time (ex: 01:30)"
+    }
   },
   "real-to-time": {
     "title": "Real to time"
