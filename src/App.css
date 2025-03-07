@@ -62,3 +62,18 @@ main h2,
 main p {
   @apply text-white;
 }
+
+.apparition {
+  animation: apparition 300ms ease-in-out;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

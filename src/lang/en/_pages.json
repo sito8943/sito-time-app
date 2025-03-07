@@ -10,10 +10,12 @@
     "input": {
       "tooltip": "Introduce la cantidad de horas en formato hh:mm.",
       "placeholder": "Time (ex: 01:30)"
-    }
+    },
+    "result": "Result"
   },
   "real-to-time": {
-    "title": "Real to time"
+    "title": "Real to time",
+    "result": "Result"
   },
   "sum-time": {
     "title": "Time sum"
