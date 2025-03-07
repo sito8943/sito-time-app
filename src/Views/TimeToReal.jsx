@@ -49,7 +49,11 @@ function TimeToReal() {
               {t("_accessibility:buttons.calculate")}
             </button>
             <button
-              type="submit"
+              type="button"
+              onClick={() => {
+                setValue("");
+                setResult("");
+              }}
               className="button flex-1"
               name={t("_accessibility:buttons.clear")}
               aria-label={t("_accessibility:ariaLabels.clear")}
