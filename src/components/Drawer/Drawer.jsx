@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // sitemap
 const sitemap = [
@@ -22,6 +22,8 @@ const sitemap = [
 function Drawer(props) {
   const { t } = useTranslation();
 
+  const location = useLocation();
+
   const { open, onClose } = props;
 
   return (
@@ -36,14 +38,18 @@ function Drawer(props) {
       <aside
         className={`${
           open ? "translate-x-0" : "-translate-x-64"
-        } pt-5 w-64 fixed top-0 left-0 z-1 border-2 border-l-0 rounded-r-lg border-border bg-drawer-background h-screen animated`}
+        } pt-5 w-64 fixed top-0 left-0 z-1 border-r-2 rounded-r-lg border-border bg-drawer-background h-screen animated`}
       >
-        <h2 className="text-xl text-white px-5 pb-5">Time App</h2>
+        <h2 className="text-xl text-white px-5 pb-5 font-bold poppins">Time App</h2>
         <ul className="flex flex-col">
           {sitemap.map((link) => (
             <li
               key={link.name}
-              className="w-full flex py-2 px-5 hover:bg-alt-background animated"
+              className={`w-full flex py-2 px-5 hover:bg-alt-background ${
+                (link.path ?? `/${link.name}`) === location.pathname
+                  ? "bg-alt-background"
+                  : ""
+              } animated`}
             >
               <Link
                 to={link.path ?? `/${link.name}`}

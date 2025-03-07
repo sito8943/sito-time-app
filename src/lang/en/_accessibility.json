@@ -3,7 +3,8 @@
     "openMenu": "Open Menu",
     "closeMenu": "Close menu",
     "submit": "Submit",
-    "calculate": "Calculate"
+    "calculate": "Calculate",
+    "clear": "Clear"
   },
   "labels": {},
   "tooltips": {},

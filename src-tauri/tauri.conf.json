@@ -12,9 +12,10 @@
   "app": {
     "windows": [
       {
+        "decorations": false,
         "title": "time-app",
-        "width": 800,
-        "height": 600
+        "width": 500,
+        "height": 500
       }
     ],
     "security": {

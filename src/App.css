@@ -21,6 +21,9 @@ h2,
 }
 
 p,
+a,
+button,
+input,
 .roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -42,7 +45,7 @@ p,
 }
 
 .input {
-  @apply text-white bg-alt-background hover:bg-background border-border border-2 px-4 py-1 flex-1;
+  @apply text-white bg-alt-background border-border border-2 px-4 py-1 flex-1 rounded-sm;
 }
 
 .primary {

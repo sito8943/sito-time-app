@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function convertHoursToHHMM(hours) {
   const hh = Math.floor(hours); // Horas enteras
@@ -7,36 +8,49 @@ function convertHoursToHHMM(hours) {
 }
 
 function RealToTime() {
+  const { t } = useTranslation();
+
   const [result, setResult] = useState("");
   const [value, setValue] = useState("");
 
   async function calculate() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
     setResult(convertHoursToHHMM(value));
   }
 
   return (
-    <main className="flex flex-col gap-5 mt-5">
-      <h2 className="text-xl">
-        Introduce la cantidad de horas en formato número real.
-      </h2>
+    <main className="flex flex-col gap-5 px-5 pt-5">
+      <h2 className="text-xl">{t("_pages:real-to-time.title")}</h2>
 
       <form
-        className="flex items-center justify-start w-full"
+        className="flex flex-col items-center justify-start w-full gap-2"
         onSubmit={(e) => {
           e.preventDefault();
           calculate();
         }}
       >
         <input
-          type="number"
-          className="input flex-1"
+          className="input w-full"
           onChange={(e) => setValue(e.currentTarget.value)}
           placeholder="Cantidad de horas (Ej: 2.01)"
         />
-        <button type="submit" className="button">
-          Calculate
-        </button>
+        <div className="w-full flex">
+          <button
+            type="submit"
+            className="button primary flex-1"
+            name={t("_accessibility:buttons.calculate")}
+            aria-label={t("_accessibility:ariaLabels.calculate")}
+          >
+            {t("_accessibility:buttons.calculate")}
+          </button>
+          <button
+            type="submit"
+            className="button flex-1"
+            name={t("_accessibility:buttons.clear")}
+            aria-label={t("_accessibility:ariaLabels.clear")}
+          >
+            {t("_accessibility:buttons.clear")}
+          </button>
+        </div>
       </form>
       <p className="w-full px-1">Resultado: {result}</p>
     </main>

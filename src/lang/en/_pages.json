@@ -1,6 +1,9 @@
 {
   "home": {
-    "title": "Home"
+    "title": "Home",
+    "welcome": "Welcome to Time App",
+    "description": "This application was implemented using: react, vite, tailwindcss and tauri",
+    "tutorial": "Open the menu in the top left corner of this window to navigate through the app"
   },
   "time-to-real": {
     "title": "Time to real",
