@@ -30,6 +30,7 @@ function RealToTime() {
           }}
         >
           <input
+            required
             className="input w-full"
             onChange={(e) => setValue(e.currentTarget.value)}
             placeholder="Cantidad de horas (Ej: 2.01)"

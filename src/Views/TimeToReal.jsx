@@ -34,6 +34,7 @@ function TimeToReal() {
           }}
         >
           <input
+            required
             className="input w-full"
             onChange={(e) => setValue(e.currentTarget.value)}
             placeholder={t("_pages:time-to-real.input.placeholder")}
