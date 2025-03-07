@@ -1,14 +1,23 @@
 {
   "home": {
-    "title": "Inicio"
+    "title": "Inicio",
+    "welcome": "Bienvenido a Time App",
+    "description": "Esta aplicación fue implementada utilizando: react, vite, tailwindcss y tauri",
+    "tutorial": "Abre el menú en la esquina superior izquierda de esta ventana para navegar por la aplicación"
   },
   "time-to-real": {
-    "title": "Tiempo a real"
+    "title": "Tiempo a real",
+    "input": {
+      "tooltip": "Introduce la cantidad de horas en formato hh:mm.",
+      "placeholder": "Tiempo (ej: 01:30)"
+    },
+    "result": "Resultado"
   },
   "real-to-time": {
-    "title": "Real a tiempo"
+    "title": "Real a tiempo",
+    "result": "Resultado"
   },
   "sum-time": {
-    "title": "Suma de tiempo"
+    "title": "Suma de tiempos"
   }
 }

@@ -1,26 +1,20 @@
 {
   "buttons": {
-    "contact": "",
-    "toTop": "To Top",
-    "openMenu": "Open Menu",
-    "closeMenu": "Close menu",
-    "submit": "Submit"
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "submit": "Enviar",
+    "calculate": "Calcular",
+    "clear": "Limpiar"
   },
   "labels": {},
   "tooltips": {},
   "ariaLabels": {
-    "openMenu": "",
-    "contactUs": "",
-    "toContact": "",
-    "to-home": "",
-    "to-aboutUs": "",
-    "to-features": "",
-    "to-project": "",
-    "to-contactUs": "",
-    "to-linkedin": "",
-    "to-github": "",
-    "to-whatsapp": "",
-    "to-top": ""
+    "openMenu": "Abrir el menú de navegación",
+    "closeMenu": "Cerrar el menú de navegación",
+    "home": "Ir a la página de inicio",
+    "time-to-real": "Ir a la sección de Tiempo a real",
+    "real-to-time": "Ir a la sección de Real a tiempo",
+    "sum-time": "Ir a la sección de Suma de tiempos"
   },
   "errors": {},
   "messages": {}
