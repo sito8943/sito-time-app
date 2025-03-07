@@ -1,7 +1,7 @@
 import React from "react";
 
 function SumTime() {
-  return <div></div>;
+  return <main></main>;
 }
 
 export default SumTime;

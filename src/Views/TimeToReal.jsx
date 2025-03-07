@@ -1,23 +1,29 @@
 import { useState } from "react";
 
-function convertHoursToHHMM(hours) {
-  const hh = Math.floor(hours); // Horas enteras
-  const mm = Math.round((hours - hh) * 60); // Minutos redondeados
-  return `${hh.toString().padStart(2, "0")}:${mm.toString().padStart(2, "0")}`;
+/**
+ *
+ * @param {string} time
+ * @returns {number} result
+ */
+function hhmmToHours(time) {
+  const [hh, mm] = time.split(":").map(Number); // Separar y convertir a números
+  return hh + mm / 60; // Convertir minutos a fracción de hora
 }
 
-function RealToTime() {
+function TimeToReal() {
   const [result, setResult] = useState("");
   const [value, setValue] = useState("");
 
   async function calculate() {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setResult(convertHoursToHHMM(value));
+    setResult(hhmmToHours(value).toFixed(2));
   }
 
   return (
-    <section className="flex flex-col gap-5 mt-5">
-      <h2 className="text-xl">Introduce la cantidad de horas en formato número real.</h2>
+    <main className="flex flex-col gap-5 mt-5">
+      <h2 className="text-xl">
+        Introduce la cantidad de horas en formato hh:mm.
+      </h2>
 
       <form
         className="flex items-center justify-start w-full"
@@ -29,7 +35,7 @@ function RealToTime() {
         <input
           className="bg-blue-500 text-gray-100 px-4 py-1 flex-1"
           onChange={(e) => setValue(e.currentTarget.value)}
-          placeholder="Cantidad de horas (Ej: 2.01)"
+          placeholder="Horas (Ej: 01:30)"
         />
         <button
           type="submit"
@@ -39,8 +45,8 @@ function RealToTime() {
         </button>
       </form>
       <p className="w-full px-1">Resultado: {result}</p>
-    </section>
+    </main>
   );
 }
 
-export default RealToTime;
+export default TimeToReal;

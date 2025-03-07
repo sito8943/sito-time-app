@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Inicio"
+  },
+  "time-to-real": {
+    "title": "Tiempo a real"
+  },
+  "real-to-time": {
+    "title": "Real a tiempo"
+  },
+  "sum-time": {
+    "title": "Suma de tiempo"
+  }
+}

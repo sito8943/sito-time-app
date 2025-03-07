@@ -1,0 +1,27 @@
+{
+  "buttons": {
+    "contact": "",
+    "toTop": "To Top",
+    "openMenu": "Open Menu",
+    "closeMenu": "Close menu",
+    "submit": "Submit"
+  },
+  "labels": {},
+  "tooltips": {},
+  "ariaLabels": {
+    "openMenu": "",
+    "contactUs": "",
+    "toContact": "",
+    "to-home": "",
+    "to-aboutUs": "",
+    "to-features": "",
+    "to-project": "",
+    "to-contactUs": "",
+    "to-linkedin": "",
+    "to-github": "",
+    "to-whatsapp": "",
+    "to-top": ""
+  },
+  "errors": {},
+  "messages": {}
+}
