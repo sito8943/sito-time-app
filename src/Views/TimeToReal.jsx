@@ -40,7 +40,7 @@ function TimeToReal() {
             onChange={(e) => setValue(e.currentTarget.value)}
             placeholder={t("_pages:time-to-real.input.placeholder")}
           />
-          <div className="w-full flex">
+          <div className="w-full flex gap-2">
             <button
               type="submit"
               className="button primary flex-1"

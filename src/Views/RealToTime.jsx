@@ -36,7 +36,7 @@ function RealToTime() {
             onChange={(e) => setValue(e.currentTarget.value)}
             placeholder={t("_pages:real-to-time.input.placeholder")}
           />
-          <div className="w-full flex">
+          <div className="w-full flex gap-2">
             <button
               type="submit"
               className="button primary flex-1"
