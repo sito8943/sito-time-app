@@ -59,7 +59,7 @@ function RealToTime() {
             </button>
           </div>
         </form>
-        <p className="w-full px-1">
+        <p className="w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
           {t("_pages:real-to-time.result")}: {result}
         </p>
       </div>
