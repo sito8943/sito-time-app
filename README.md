@@ -1,7 +1,9 @@
-# Tauri + React
+# Time App
 
-This template should help get you started developing with Tauri and React in Vite.
+*App made with Tauri - React - Tailwindcss - Vite*
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- Calculate Real to Time
+- Calculate Time to Real
+- Calculate Sum of Times
