@@ -8,7 +8,6 @@
   "time-to-real": {
     "title": "Time to real",
     "input": {
-      "tooltip": "Introduce la cantidad de horas en formato hh:mm.",
       "placeholder": "Time (ex: 01:30)"
     },
     "result": "Result"
@@ -22,7 +21,7 @@
   },
   "sum-time": {
     "title": "Time sum",
-    "input": { "placeholder": "Time (ex: 01:30)" },
-    "result": "Result"
+    "result": "Result",
+    "input": { "placeholder": "Time (ex: 01:30)" }
   }
 }

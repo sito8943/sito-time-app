@@ -11,8 +11,8 @@
   "labels": {},
   "tooltips": {},
   "ariaLabels": {
-    "add": "",
-    "remove": "",
+    "add": "Add an item",
+    "remove": "Remove an item",
     "openMenu": "Open the navigation menu",
     "closeMenu": "Close the navigation menu",
     "home": "Go to the home page",
