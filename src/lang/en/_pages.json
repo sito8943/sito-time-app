@@ -18,6 +18,8 @@
     "result": "Result"
   },
   "sum-time": {
-    "title": "Time sum"
+    "title": "Time sum",
+    "input": { "placeholder": "Time (ex: 01:30)" },
+    "result": "Result"
   }
 }

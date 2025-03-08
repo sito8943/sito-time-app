@@ -45,7 +45,7 @@ input,
 }
 
 .input {
-  @apply text-white bg-alt-background border-border border-2 px-4 py-1 flex-1 rounded-sm;
+  @apply text-white bg-alt-background border-border border-2 px-4 py-1 rounded-sm;
 }
 
 .primary {

@@ -1,5 +1,7 @@
 {
   "buttons": {
+    "add": "Add",
+    "remove": "Remove",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "submit": "Submit",
@@ -9,6 +11,8 @@
   "labels": {},
   "tooltips": {},
   "ariaLabels": {
+    "add": "",
+    "remove": "",
     "openMenu": "Open the navigation menu",
     "closeMenu": "Close the navigation menu",
     "home": "Go to the home page",
