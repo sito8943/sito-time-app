@@ -34,7 +34,7 @@ function RealToTime() {
             value={value}
             className="input w-full"
             onChange={(e) => setValue(e.currentTarget.value)}
-            placeholder="Cantidad de horas (Ej: 2.01)"
+            placeholder={t("_pages:real-to-time.input.placeholder")}
           />
           <div className="w-full flex">
             <button

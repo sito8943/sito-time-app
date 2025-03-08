@@ -15,7 +15,10 @@
   },
   "real-to-time": {
     "title": "Real to time",
-    "result": "Result"
+    "result": "Result",
+    "input": {
+      "placeholder": "Hours (ex: 2.01)"
+    }
   },
   "sum-time": {
     "title": "Time sum",
