@@ -10,13 +10,13 @@
   },
   "labels": {
     "history": "Historial",
-    "justNow": "ahora mismo",
-    "minute": "minuto",
+    "justNow": "Ahora mismo",
+    "minute": "Minuto",
     "minutes": "Minutos",
-    "hour": "hora",
-    "hours": "horas",
+    "hour": "Hora",
+    "hours": "Horas",
     "yesterday": "ayer",
-    "ago": "hace"
+    "ago": "Hace"
   },
   "tooltips": {},
   "ariaLabels": {
