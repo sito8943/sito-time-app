@@ -25,7 +25,10 @@ function Navbar(props) {
   }, []);
 
   const toggleRestoreMaximize = async (e) => {
-    if (e.buttons === 1 && e.target.nodeName === "HEADER") {
+    if (
+      e.buttons === 1 &&
+      (e.target.nodeName === "HEADER" || e.target.nodeName === "DIV")
+    ) {
       // Primary (left) button
       if (e.detail === 2) {
         if (!isMaximized) {
@@ -82,7 +85,10 @@ function Navbar(props) {
                 className="text-xs absolute -top-0.5 -ml-[2px]"
                 icon={faSquare}
               />
-              <FontAwesomeIcon className="text-xs absolute z-10 right-[1px] bg-background" icon={faSquare} />
+              <FontAwesomeIcon
+                className="text-xs absolute z-10 right-[1px] bg-background"
+                icon={faSquare}
+              />
             </div>
           ) : (
             <FontAwesomeIcon className="text-xs" icon={faSquare} />
