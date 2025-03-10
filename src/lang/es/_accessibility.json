@@ -8,7 +8,9 @@
     "calculate": "Calcular",
     "clear": "Limpiar"
   },
-  "labels": {},
+  "labels": {
+    "history": "Historial"
+  },
   "tooltips": {},
   "ariaLabels": {
     "add": "Agregar un elemento",

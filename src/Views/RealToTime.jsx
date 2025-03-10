@@ -1,5 +1,8 @@
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import useTimeAge from "../hooks/useTimeAge";
 
 function convertHoursToHHMM(hours) {
   const hh = Math.floor(hours); // Horas enteras
@@ -14,8 +17,14 @@ function RealToTime() {
   const [value, setValue] = useState("");
 
   async function calculate() {
-    setResult(convertHoursToHHMM(value));
+    const result = convertHoursToHHMM(value);
+    setResult(result);
+    setHistory([...history, { result: result, time: new Date() }]);
   }
+
+  const [history, setHistory] = useState([]);
+
+  const { timeAge } = useTimeAge();
 
   return (
     <main className="p-5">
@@ -59,6 +68,32 @@ function RealToTime() {
             </button>
           </div>
         </form>
+        <div>
+          <div className="flex justify-between">
+            <h3 className="text-white text-lg">
+              {t("_accessibility:labels.history")}
+            </h3>
+            <button
+              type="button"
+              onClick={() => setHistory([])}
+              name={t("_accessibility:buttons.clearHistory")}
+              aria-label={t("_accessibility:ariaLabels.clearHistory")}
+              className="text-red-400 hover:text-red-500"
+            >
+              <FontAwesomeIcon icon={faTrash} />
+            </button>
+          </div>
+
+          <ul className="mt-2 history">
+            {history.map((hist, i) => (
+              <li key={i} className="flex gap-2">
+                <p className="!text-gray-400">
+                  {hist.result} - {timeAge(hist.time)}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
         <p className="w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
           {t("_pages:real-to-time.result")}: {result}
         </p>

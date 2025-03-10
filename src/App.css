@@ -23,6 +23,7 @@ h2,
 p,
 a,
 button,
+h3,
 input,
 .roboto {
   font-family: "Roboto", sans-serif;
@@ -76,4 +77,9 @@ main p {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.history {
+  height: calc(100vh - 304px);
+  @apply overflow-auto;
 }

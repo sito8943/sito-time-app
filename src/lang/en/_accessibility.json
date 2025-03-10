@@ -6,9 +6,12 @@
     "closeMenu": "Close menu",
     "submit": "Submit",
     "calculate": "Calculate",
-    "clear": "Clear"
+    "clear": "Clear",
+    "clearHistory": "Clear history"
   },
-  "labels": {},
+  "labels": {
+    "history": "History"
+  },
   "tooltips": {},
   "ariaLabels": {
     "add": "Add an item",
@@ -18,7 +21,8 @@
     "home": "Go to the home page",
     "time-to-real": "Go to the Time to Real section",
     "real-to-time": "Go to the Real to Time section",
-    "sum-time": "Go to the Time Sum section"
+    "sum-time": "Go to the Time Sum section",
+    "clearHistory": "Clear current history"
   },
   "errors": {},
   "messages": {}
