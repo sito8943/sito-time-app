@@ -93,22 +93,27 @@ function SumTime() {
             </button>
           </div>
         </form>
-        <ul className="flex gap-2 flex-wrap">
-          {times.map((time, i) => (
-            <li key={i} className="flex items-center apparition">
-              <p className="input !px-5 !rounded-r-none">{time}</p>{" "}
-              <button
-                type="button"
-                onClick={() => removeTime(i)}
-                className="button !rounded-l-none"
-                name={t("_accessibility:buttons.remove")}
-                aria-label={t("_accessibility:ariaLabels.remove")}
-              >
-                <FontAwesomeIcon icon={faMinus} />
-              </button>
-            </li>
-          ))}
-        </ul>
+        {times.length > 0 ? (
+          <div className="apparition">
+            <h3 className="text-white text-lg mb-2">{t("_pages:sum-time.sum")}</h3>
+            <ul className="flex gap-2 flex-wrap">
+              {times.map((time, i) => (
+                <li key={i} className="flex items-center apparition">
+                  <p className="input !px-5 !rounded-r-none">{time}</p>{" "}
+                  <button
+                    type="button"
+                    onClick={() => removeTime(i)}
+                    className="button !rounded-l-none"
+                    name={t("_accessibility:buttons.remove")}
+                    aria-label={t("_accessibility:ariaLabels.remove")}
+                  >
+                    <FontAwesomeIcon icon={faMinus} />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         <p className="w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
           {t("_pages:sum-time.result")}: {result}
         </p>

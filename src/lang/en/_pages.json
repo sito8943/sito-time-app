@@ -22,6 +22,7 @@
   "sum-time": {
     "title": "Time sum",
     "result": "Result",
+    "sum": "Adding Up",
     "input": { "placeholder": "Time (ex: 01:30)" }
   }
 }
