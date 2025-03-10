@@ -10,7 +10,14 @@
     "clearHistory": "Clear history"
   },
   "labels": {
-    "history": "History"
+    "history": "History",
+    "justNow": "Right now",
+    "minute": "Minute",
+    "minutes": "Minutes",
+    "hour": "Hour",
+    "hours": "Hours",
+    "yesterday": "Yesterday",
+    "ago": "Ago"
   },
   "tooltips": {},
   "ariaLabels": {

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+// components
+import History from "../components/History/History";
+
 /**
  *
  * @param {string} time
@@ -18,8 +21,12 @@ function TimeToReal() {
   const [value, setValue] = useState("");
 
   async function calculate() {
-    setResult(hhmmToHours(value).toFixed(2));
+    const result = hhmmToHours(value).toFixed(2);
+    setResult(result);
+    setHistory([...history, { result: result, time: new Date() }]);
   }
+
+  const [history, setHistory] = useState([]);
 
   return (
     <main className="p-5">
@@ -63,6 +70,7 @@ function TimeToReal() {
             </button>
           </div>
         </form>
+        <History history={history} setHistory={setHistory} />
         <p className="w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
           {t("_pages:real-to-time.result")}: {result}
         </p>
