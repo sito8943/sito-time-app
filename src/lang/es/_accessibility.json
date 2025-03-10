@@ -6,7 +6,9 @@
     "closeMenu": "Cerrar menú",
     "submit": "Enviar",
     "calculate": "Calcular",
-    "clear": "Limpiar"
+    "clear": "Limpiar",
+    "clearHistory": "Limpiar historial",
+    "github": "Código fuente"
   },
   "labels": {
     "history": "Historial",
@@ -27,7 +29,9 @@
     "home": "Ir a la página de inicio",
     "time-to-real": "Ir a la sección de Tiempo a real",
     "real-to-time": "Ir a la sección de Real a tiempo",
-    "sum-time": "Ir a la sección de Suma de tiempos"
+    "sum-time": "Ir a la sección de Suma de tiempos",
+    "clearHistory": "Limpiar historial",
+    "github": "Ir al código fuente"
   },
   "errors": {},
   "messages": {}

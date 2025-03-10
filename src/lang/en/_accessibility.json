@@ -7,7 +7,8 @@
     "submit": "Submit",
     "calculate": "Calculate",
     "clear": "Clear",
-    "clearHistory": "Clear history"
+    "clearHistory": "Clear history",
+    "github": "Source Code"
   },
   "labels": {
     "history": "History",
@@ -29,7 +30,8 @@
     "time-to-real": "Go to the Time to Real section",
     "real-to-time": "Go to the Real to Time section",
     "sum-time": "Go to the Time Sum section",
-    "clearHistory": "Clear current history"
+    "clearHistory": "Clear current history",
+    "github": "Go to source code"
   },
   "errors": {},
   "messages": {}

@@ -1,3 +1,5 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,6 +14,18 @@ function Home() {
           {t("_pages:home.description")}
         </p>
         <p className="text-balance text-center">{t("_pages:home.tutorial")}</p>
+        <div className="flex items-center justify-center">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            name={t("_accessibility:buttons.github")}
+            aria-label={t("_accessibility:ariaLabels.github")}
+            href="https://github.com/sito8943/sito-time-app"
+            className="text-white hover:text-primary text-2xl"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </div>
       </div>
     </main>
   );
