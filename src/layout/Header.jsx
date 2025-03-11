@@ -12,7 +12,6 @@ function Header() {
       <Drawer
         open={showDrawer}
         onClose={() => {
-          console.log(showDrawer);
           setShowDrawer(false);
         }}
       />

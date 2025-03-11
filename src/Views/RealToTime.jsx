@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // components
@@ -6,6 +6,7 @@ import History from "../components/History/History";
 
 // utils
 import { convertHoursToHHMM } from "../utils/utils";
+import { loadHistoryFromLocal, saveToLocal } from "../utils/localStorage";
 
 function RealToTime() {
   const { t } = useTranslation();
@@ -23,6 +24,14 @@ function RealToTime() {
   }
 
   const [history, setHistory] = useState([]);
+
+  useEffect(() => {
+    if (history.length) saveToLocal("real-history", history);
+  }, [history]);
+
+  useEffect(() => {
+    setHistory(loadHistoryFromLocal("real-history"));
+  }, []);
 
   return (
     <main className="p-5">

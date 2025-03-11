@@ -6,6 +6,7 @@ import History from "../components/History/History";
 
 // utils
 import { hhmmToHours } from "../utils/utils";
+import { loadHistoryFromLocal, saveToLocal } from "../utils/localStorage";
 
 function TimeToReal() {
   const { t } = useTranslation();
@@ -23,6 +24,14 @@ function TimeToReal() {
   }
 
   const [history, setHistory] = useState([]);
+
+  useEffect(() => {
+    if (history.length) saveToLocal("real-history", history);
+  }, [history]);
+
+  useEffect(() => {
+    setHistory(loadHistoryFromLocal("real-history"));
+  }, []);
 
   return (
     <main className="p-5">
