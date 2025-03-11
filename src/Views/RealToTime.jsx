@@ -64,10 +64,10 @@ function RealToTime() {
           </div>
         </form>
         <History history={history} setHistory={setHistory} />
-        <p className="w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
-          {t("_pages:real-to-time.result")}: {result}
-        </p>
       </div>
+      <p className="opacity w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
+        {t("_pages:real-to-time.result")}: {result}
+      </p>
     </main>
   );
 }

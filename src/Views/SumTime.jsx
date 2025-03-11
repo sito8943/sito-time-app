@@ -102,10 +102,10 @@ function SumTime() {
             </ul>
           </div>
         ) : null}
-        <p className="w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
-          {t("_pages:sum-time.result")}: {result}
-        </p>
       </div>
+      <p className="opacity w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
+        {t("_pages:sum-time.result")}: {result}
+      </p>
     </main>
   );
 }
