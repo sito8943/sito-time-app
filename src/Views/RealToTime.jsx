@@ -4,11 +4,8 @@ import { useTranslation } from "react-i18next";
 // components
 import History from "../components/History/History";
 
-function convertHoursToHHMM(hours) {
-  const hh = Math.floor(hours); // Horas enteras
-  const mm = Math.round((hours - hh) * 60); // Minutos redondeados
-  return `${hh.toString().padStart(2, "0")}:${mm.toString().padStart(2, "0")}`;
-}
+// utils
+import { convertHoursToHHMM } from "../utils/utils";
 
 function RealToTime() {
   const { t } = useTranslation();

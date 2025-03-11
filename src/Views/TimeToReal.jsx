@@ -4,15 +4,8 @@ import { useTranslation } from "react-i18next";
 // components
 import History from "../components/History/History";
 
-/**
- *
- * @param {string} time
- * @returns {number} result
- */
-function hhmmToHours(time) {
-  const [hh, mm] = time.split(":").map(Number); // Separar y convertir a números
-  return hh + mm / 60; // Convertir minutos a fracción de hora
-}
+// utils
+import { hhmmToHours } from "../utils/utils";
 
 function TimeToReal() {
   const { t } = useTranslation();

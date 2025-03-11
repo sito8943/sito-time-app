@@ -5,22 +5,8 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 
-function sumTimes(times) {
-  let totalMinutes = 0;
-
-  times.forEach((time) => {
-    const [hh, mm] = time.split(":").map(Number);
-    totalMinutes += hh * 60 + mm; // Convertimos todo a minutos y sumamos
-  });
-
-  const totalHours = Math.floor(totalMinutes / 60); // Convertimos minutos a horas
-  const remainingMinutes = totalMinutes % 60; // Minutos restantes
-
-  // Formateamos para que siempre tenga dos dígitos
-  return `${totalHours.toString().padStart(2, "0")}:${remainingMinutes
-    .toString()
-    .padStart(2, "0")}`;
-}
+// utils
+import { sumTimes } from "../utils/utils";
 
 function SumTime() {
   const { t } = useTranslation();
@@ -95,7 +81,9 @@ function SumTime() {
         </form>
         {times.length > 0 ? (
           <div className="apparition">
-            <h3 className="text-white text-lg mb-2">{t("_pages:sum-time.sum")}</h3>
+            <h3 className="text-white text-lg mb-2">
+              {t("_pages:sum-time.sum")}
+            </h3>
             <ul className="flex gap-2 flex-wrap">
               {times.map((time, i) => (
                 <li key={i} className="flex items-center apparition">
