@@ -8,7 +8,8 @@
     "calculate": "Calcular",
     "clear": "Limpiar",
     "clearHistory": "Limpiar historial",
-    "github": "Código fuente"
+    "github": "Código fuente",
+    "restoreValue": "Restaurar Valor"
   },
   "labels": {
     "history": "Historial",
@@ -31,7 +32,8 @@
     "real-to-time": "Ir a la sección de Real a tiempo",
     "sum-time": "Ir a la sección de Suma de tiempos",
     "clearHistory": "Limpiar historial",
-    "github": "Ir al código fuente"
+    "github": "Ir al código fuente",
+    "restoreValue": "Vuelve a calcular el valor clickeado"
   },
   "errors": {},
   "messages": {}

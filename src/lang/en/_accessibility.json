@@ -8,7 +8,8 @@
     "calculate": "Calculate",
     "clear": "Clear",
     "clearHistory": "Clear history",
-    "github": "Source Code"
+    "github": "Source Code",
+    "restoreValue": "Restore Value"
   },
   "labels": {
     "history": "History",
@@ -31,7 +32,8 @@
     "real-to-time": "Go to the Real to Time section",
     "sum-time": "Go to the Time Sum section",
     "clearHistory": "Clear current history",
-    "github": "Go to source code"
+    "github": "Go to source code",
+    "restoreValue": "Calculate the clicked value again"
   },
   "errors": {},
   "messages": {}

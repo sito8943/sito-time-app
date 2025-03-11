@@ -13,7 +13,7 @@ import { saveHistoryToLocal } from "../../utils/localStorage";
 function History(props) {
   const { t } = useTranslation();
 
-  const { history, setHistory, key } = props;
+  const { history, setHistory, key, onHistoryClick } = props;
 
   const { timeAge } = useTimeAge();
 
@@ -40,9 +40,14 @@ function History(props) {
       <ul className="mt-2 history">
         {history.map((hist, i) => (
           <li key={i} className="flex gap-2">
-            <p className="!text-gray-400">
+            <button
+              name={t("_accessibility:buttons.restoreValue")}
+              aria-label={t("_accessibility:ariaLabels.restoreValue")}
+              onClick={() => onHistoryClick(i)}
+              className="!text-gray-400"
+            >
               {hist.input} = {hist.result} - {timeAge(hist.time)}
-            </p>
+            </button>
           </li>
         ))}
       </ul>

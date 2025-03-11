@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // components
@@ -17,16 +17,17 @@ function TimeToReal() {
   const [result, setResult] = useState("");
   const [value, setValue] = useState("");
 
-  async function calculate() {
+  const [history, setHistory] = useState([]);
+
+  const calculate = useCallback(() => {
+    console.log(value);
     const result = hhmmToHours(value).toFixed(2);
     setResult(result);
     setHistory([
       ...history,
       { input: value, result: result, time: new Date() },
     ]);
-  }
-
-  const [history, setHistory] = useState([]);
+  }, [history, value]);
 
   useEffect(() => {
     if (history.length) saveHistoryToLocal("time-history", history);
@@ -35,6 +36,14 @@ function TimeToReal() {
   useEffect(() => {
     setHistory(loadHistoryFromLocal("time-history"));
   }, []);
+
+  const onHistoryClick = useCallback(
+    (i) => {
+      setValue(history[i].input);
+      calculate();
+    },
+    [history, calculate]
+  );
 
   return (
     <main className="p-5">
@@ -78,7 +87,12 @@ function TimeToReal() {
             </button>
           </div>
         </form>
-        <History history={history} setHistory={setHistory} key="time-history" />
+        <History
+          history={history}
+          setHistory={setHistory}
+          key="time-history"
+          onHistoryClick={onHistoryClick}
+        />
       </div>
       <p className="opacity w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
         {t("_pages:real-to-time.result")}: {result}
