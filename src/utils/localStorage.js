@@ -3,8 +3,16 @@
  * @param {string} key key of item
  * @param {object} obj object to save
  */
-export function saveToLocal(key, obj) {
+export function saveHistoryToLocal(key, obj) {
   localStorage.setItem(key, JSON.stringify(obj));
+}
+
+/**
+ *
+ * @param {object} obj object to save
+ */
+export function saveSumToLocal(obj) {
+  localStorage.setItem("sum", JSON.stringify(obj));
 }
 
 /**
@@ -22,6 +30,20 @@ export function loadHistoryFromLocal(key) {
       }));
   } catch (err) {
     console.error(err);
-    return [];
   }
+  return [];
+}
+
+/**
+ *
+ * @returns {string[]} sum from local
+ */
+export function loadSumFromLocal() {
+  const sum = localStorage.getItem("sum");
+  try {
+    if (sum && sum.length) return JSON.parse(sum);
+  } catch (err) {
+    console.error(err);
+  }
+  return [];
 }

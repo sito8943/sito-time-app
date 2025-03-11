@@ -6,7 +6,10 @@ import History from "../components/History/History";
 
 // utils
 import { convertHoursToHHMM } from "../utils/utils";
-import { loadHistoryFromLocal, saveToLocal } from "../utils/localStorage";
+import {
+  loadHistoryFromLocal,
+  saveHistoryToLocal,
+} from "../utils/localStorage";
 
 function RealToTime() {
   const { t } = useTranslation();
@@ -26,7 +29,7 @@ function RealToTime() {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    if (history.length) saveToLocal("real-history", history);
+    if (history.length) saveHistoryToLocal("real-history", history);
   }, [history]);
 
   useEffect(() => {
@@ -75,7 +78,7 @@ function RealToTime() {
             </button>
           </div>
         </form>
-        <History history={history} setHistory={setHistory} />
+        <History history={history} setHistory={setHistory} key="real-history" />
       </div>
       <p className="opacity w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
         {t("_pages:real-to-time.result")}: {result}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // components
@@ -6,7 +6,10 @@ import History from "../components/History/History";
 
 // utils
 import { hhmmToHours } from "../utils/utils";
-import { loadHistoryFromLocal, saveToLocal } from "../utils/localStorage";
+import {
+  loadHistoryFromLocal,
+  saveHistoryToLocal,
+} from "../utils/localStorage";
 
 function TimeToReal() {
   const { t } = useTranslation();
@@ -26,11 +29,11 @@ function TimeToReal() {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    if (history.length) saveToLocal("real-history", history);
+    if (history.length) saveHistoryToLocal("time-history", history);
   }, [history]);
 
   useEffect(() => {
-    setHistory(loadHistoryFromLocal("real-history"));
+    setHistory(loadHistoryFromLocal("time-history"));
   }, []);
 
   return (
@@ -75,7 +78,7 @@ function TimeToReal() {
             </button>
           </div>
         </form>
-        <History history={history} setHistory={setHistory} />
+        <History history={history} setHistory={setHistory} key="time-history" />
       </div>
       <p className="opacity w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
         {t("_pages:real-to-time.result")}: {result}

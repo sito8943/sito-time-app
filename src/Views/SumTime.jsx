@@ -7,6 +7,7 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 
 // utils
 import { sumTimes } from "../utils/utils";
+import { loadSumFromLocal, saveSumToLocal } from "../utils/localStorage";
 
 function SumTime() {
   const { t } = useTranslation();
@@ -19,11 +20,19 @@ function SumTime() {
       const newTimes = [...times];
       newTimes.splice(index, 1);
       setTimes(newTimes);
+      saveSumToLocal(newTimes);
     },
     [times]
   );
 
-  const addTime = useCallback((el) => setTimes([...times, el]), [times]);
+  const addTime = useCallback(
+    (el) => {
+      const newTimes = [...times, el];
+      setTimes(newTimes);
+      saveSumToLocal(newTimes);
+    },
+    [times]
+  );
 
   const [value, setValue] = useState("");
 
@@ -35,6 +44,11 @@ function SumTime() {
     if (times?.length > 0) calculate(times);
     else setResult("");
   }, [times]);
+
+  useEffect(() => {
+    console.log(loadSumFromLocal());
+    setTimes(loadSumFromLocal());
+  }, []);
 
   return (
     <main className="p-5">

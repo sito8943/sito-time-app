@@ -7,10 +7,13 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 // hooks
 import useTimeAge from "../../hooks/useTimeAge";
 
+// utils
+import { saveHistoryToLocal } from "../../utils/localStorage";
+
 function History(props) {
   const { t } = useTranslation();
 
-  const { history, setHistory } = props;
+  const { history, setHistory, key } = props;
 
   const { timeAge } = useTimeAge();
 
@@ -22,7 +25,10 @@ function History(props) {
         </h3>
         <button
           type="button"
-          onClick={() => setHistory([])}
+          onClick={() => {
+            setHistory([]);
+            saveHistoryToLocal(key, []);
+          }}
           name={t("_accessibility:buttons.clearHistory")}
           aria-label={t("_accessibility:ariaLabels.clearHistory")}
           className="text-red-400 hover:text-red-500"
