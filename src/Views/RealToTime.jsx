@@ -16,7 +16,10 @@ function RealToTime() {
   async function calculate() {
     const result = convertHoursToHHMM(value);
     setResult(result);
-    setHistory([...history, { result: result, time: new Date() }]);
+    setHistory([
+      ...history,
+      { input: value, result: result, time: new Date() },
+    ]);
   }
 
   const [history, setHistory] = useState([]);

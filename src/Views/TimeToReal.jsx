@@ -16,7 +16,10 @@ function TimeToReal() {
   async function calculate() {
     const result = hhmmToHours(value).toFixed(2);
     setResult(result);
-    setHistory([...history, { result: result, time: new Date() }]);
+    setHistory([
+      ...history,
+      { input: value, result: result, time: new Date() },
+    ]);
   }
 
   const [history, setHistory] = useState([]);

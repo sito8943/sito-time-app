@@ -35,7 +35,7 @@ function History(props) {
         {history.map((hist, i) => (
           <li key={i} className="flex gap-2">
             <p className="!text-gray-400">
-              {hist.result} - {timeAge(hist.time)}
+              {hist.input} = {hist.result} - {timeAge(hist.time)}
             </p>
           </li>
         ))}
