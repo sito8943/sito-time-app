@@ -19,14 +19,11 @@ function RealToTime() {
 
   const [history, setHistory] = useState([]);
 
-  const calculate = useCallback(() => {
-    const result = convertHoursToHHMM(value);
+  const calculate = (input) => {
+    const result = convertHoursToHHMM(input);
     setResult(result);
-    setHistory([
-      ...history,
-      { input: value, result: result, time: new Date() },
-    ]);
-  }, [history, value]);
+    setHistory([...history, { input, result: result, time: new Date() }]);
+  };
 
   useEffect(() => {
     if (history.length) saveHistoryToLocal("real-history", history);
@@ -36,13 +33,10 @@ function RealToTime() {
     setHistory(loadHistoryFromLocal("real-history"));
   }, []);
 
-  const onHistoryClick = useCallback(
-    (i) => {
-      setValue(history[i].input);
-      calculate();
-    },
-    [history, calculate]
-  );
+  const onHistoryClick = (i) => {
+    setValue(history[i].input);
+    calculate(history[i].input);
+  };
 
   return (
     <main className="p-5">
@@ -53,7 +47,7 @@ function RealToTime() {
           className="flex flex-col items-center justify-start w-full gap-2"
           onSubmit={(e) => {
             e.preventDefault();
-            calculate();
+            calculate(value);
           }}
         >
           <input

@@ -19,15 +19,11 @@ function TimeToReal() {
 
   const [history, setHistory] = useState([]);
 
-  const calculate = useCallback(() => {
-    console.log(value);
-    const result = hhmmToHours(value).toFixed(2);
+  const calculate = (input) => {
+    const result = hhmmToHours(input).toFixed(2);
     setResult(result);
-    setHistory([
-      ...history,
-      { input: value, result: result, time: new Date() },
-    ]);
-  }, [history, value]);
+    setHistory([...history, { input, result: result, time: new Date() }]);
+  };
 
   useEffect(() => {
     if (history.length) saveHistoryToLocal("time-history", history);
@@ -37,13 +33,10 @@ function TimeToReal() {
     setHistory(loadHistoryFromLocal("time-history"));
   }, []);
 
-  const onHistoryClick = useCallback(
-    (i) => {
-      setValue(history[i].input);
-      calculate();
-    },
-    [history, calculate]
-  );
+  const onHistoryClick = (i) => {
+    setValue(history[i].input);
+    calculate(history[i].input);
+  };
 
   return (
     <main className="p-5">
@@ -54,7 +47,7 @@ function TimeToReal() {
           className="flex flex-col items-center justify-start w-full gap-2"
           onSubmit={(e) => {
             e.preventDefault();
-            calculate();
+            calculate(value);
           }}
         >
           <input
