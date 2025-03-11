@@ -1,7 +1,8 @@
 {
   "home": {
     "title": "Inicio",
-    "welcome": "Bienvenido a Time App",
+    "welcome": "Bienvenido a",
+    "appName": "Time App",
     "description": "Esta aplicación fue implementada utilizando: react, vite, tailwindcss y tauri",
     "tutorial": "Abre el menú en la esquina superior izquierda de esta ventana para navegar por la aplicación"
   },
