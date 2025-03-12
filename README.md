@@ -16,3 +16,7 @@
 - Calculate Time to Real
 - Calculate Sum of Times
 
+## Future Features
+
+- Stopwatch
+- Timer
