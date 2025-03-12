@@ -12,6 +12,7 @@ function useTimeAge() {
       const diffInHours = Math.floor(diffInMinutes / 60);
 
       // Traducciones condicionales
+
       const isSpanish = i18n.language === "es";
       const ago = t("_accessibility:labels.ago");
       const minute = t("_accessibility:labels.minute");
@@ -30,9 +31,9 @@ function useTimeAge() {
         } ${isSpanish ? "" : ago}`;
       }
       if (diffInHours < 24) {
-        return `${isSpanish ? "hace" : ""} ${diffInHours} ${
+        return `${isSpanish ? ago : ""} ${diffInHours} ${
           diffInHours === 1 ? hour : hours
-        }`;
+        } ${isSpanish ? "" : ago}`;
       }
       if (diffInHours < 48) {
         return yesterday;
