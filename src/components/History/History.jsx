@@ -44,7 +44,7 @@ function History(props) {
               name={t("_accessibility:buttons.restoreValue")}
               aria-label={t("_accessibility:ariaLabels.restoreValue")}
               onClick={() => onHistoryClick(i)}
-              className="!text-gray-400"
+              className="!text-gray-400 hover:!text-gray-300"
             >
               {hist.input} = {hist.result} - {timeAge(hist.time)}
             </button>
