@@ -9,7 +9,8 @@
     "clear": "Limpiar",
     "clearHistory": "Limpiar historial",
     "github": "Código fuente",
-    "restoreValue": "Restaurar Valor"
+    "restoreValue": "Restaurar Valor",
+    "copyToClipboard": "Copiar al portapapeles"
   },
   "labels": {
     "history": "Historial",
@@ -33,7 +34,8 @@
     "sum-time": "Ir a la sección de Suma de tiempos",
     "clearHistory": "Limpiar historial",
     "github": "Ir al código fuente",
-    "restoreValue": "Vuelve a calcular el valor clickeado"
+    "restoreValue": "Vuelve a calcular el valor clickeado",
+    "copyToClipboard": "Click para guardar en el portapeles"
   },
   "errors": {},
   "messages": {}

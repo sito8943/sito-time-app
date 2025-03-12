@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faClipboard } from "@fortawesome/free-solid-svg-icons";
 
 // hooks
 import useTimeAge from "../../hooks/useTimeAge";
@@ -39,14 +39,34 @@ function History(props) {
 
       <ul className="mt-2 history">
         {history.map((hist, i) => (
-          <li key={i} className="flex gap-2">
+          <li key={i} className="flex gap-1">
             <button
               name={t("_accessibility:buttons.restoreValue")}
               aria-label={t("_accessibility:ariaLabels.restoreValue")}
               onClick={() => onHistoryClick(i)}
               className="!text-gray-400 hover:!text-gray-300"
             >
-              {hist.input} = {hist.result} - {timeAge(hist.time)}
+              {hist.input}
+            </button>
+            <p className="!text-gray-400">
+              = {hist.result} - {timeAge(hist.time)}
+            </p>
+            <button
+              onClick={() => {
+                navigator.clipboard
+                  .writeText(hist.result)
+                  .then(() => {
+                    console.log("Text successfully copied to clipboard!");
+                  })
+                  .catch((err) => {
+                    console.error("Error copying text to clipboard: ", err);
+                  });
+              }}
+              name={t("_accessibility:buttons.copyToClipboard")}
+              aria-label={t("_accessibility:ariaLabels.copyToClipboard")}
+              className="ml-1 text-primary/40 hover:text-primary"
+            >
+              <FontAwesomeIcon icon={faClipboard} />
             </button>
           </li>
         ))}

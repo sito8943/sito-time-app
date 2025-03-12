@@ -9,7 +9,8 @@
     "clear": "Clear",
     "clearHistory": "Clear history",
     "github": "Source Code",
-    "restoreValue": "Restore Value"
+    "restoreValue": "Restore Value",
+    "copyToClipboard": "Copy to clipboard"
   },
   "labels": {
     "history": "History",
@@ -33,7 +34,8 @@
     "sum-time": "Go to the Time Sum section",
     "clearHistory": "Clear current history",
     "github": "Go to source code",
-    "restoreValue": "Calculate the clicked value again"
+    "restoreValue": "Calculate the clicked value again",
+    "copyToClipboard": "Click to save in the clipboard"
   },
   "errors": {},
   "messages": {}
