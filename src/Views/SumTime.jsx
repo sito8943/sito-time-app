@@ -84,6 +84,7 @@ function SumTime() {
               onClick={() => {
                 setValue("");
                 setResult("");
+                setTimes([]);
               }}
               className="button flex-1"
               name={t("_accessibility:buttons.clear")}
