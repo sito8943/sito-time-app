@@ -10,7 +10,8 @@
     "clearHistory": "Limpiar historial",
     "github": "Código fuente",
     "restoreValue": "Restaurar Valor",
-    "copyToClipboard": "Copiar al portapapeles"
+    "copyToClipboard": "Copiar al portapapeles",
+    "closeNotification": "Cerrar notificación"
   },
   "labels": {
     "history": "Historial",
@@ -35,7 +36,8 @@
     "clearHistory": "Limpiar historial",
     "github": "Ir al código fuente",
     "restoreValue": "Vuelve a calcular el valor clickeado",
-    "copyToClipboard": "Click para guardar en el portapeles"
+    "copyToClipboard": "Guarda en el portapeles el valor seleccionado",
+    "closeNotification": "Cierra la notificación actual"
   },
   "errors": {
     "unknownError": "Ha ocurrido un error"

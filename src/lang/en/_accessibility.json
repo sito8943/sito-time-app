@@ -10,7 +10,8 @@
     "clearHistory": "Clear history",
     "github": "Source Code",
     "restoreValue": "Restore Value",
-    "copyToClipboard": "Copy to clipboard"
+    "copyToClipboard": "Copy to clipboard",
+    "closeNotification": "Close notification"
   },
   "labels": {
     "history": "History",
@@ -35,7 +36,8 @@
     "clearHistory": "Clear current history",
     "github": "Go to source code",
     "restoreValue": "Calculate the clicked value again",
-    "copyToClipboard": "Click to save in the clipboard"
+    "copyToClipboard": "Save in the clipboard the selected value",
+    "closeNotification": "Closes the current notification"
   },
   "errors": {
     "unknownError": "An error has occurred"
