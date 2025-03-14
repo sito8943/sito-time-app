@@ -83,7 +83,7 @@ function TimeToReal() {
         <History
           history={history}
           setHistory={setHistory}
-          key="time-history"
+          historyKey="time-history"
           onHistoryClick={onHistoryClick}
         />
       </div>

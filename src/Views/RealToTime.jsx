@@ -83,7 +83,7 @@ function RealToTime() {
         <History
           history={history}
           setHistory={setHistory}
-          key="real-history"
+          historyKey="real-history"
           onHistoryClick={onHistoryClick}
         />
       </div>
