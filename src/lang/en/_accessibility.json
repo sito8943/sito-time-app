@@ -37,6 +37,10 @@
     "restoreValue": "Calculate the clicked value again",
     "copyToClipboard": "Click to save in the clipboard"
   },
-  "errors": {},
-  "messages": {}
+  "errors": {
+    "unknownError": "An error has occurred"
+  },
+  "messages": {
+    "historyCopied": "Copy to clipboard"
+  }
 }

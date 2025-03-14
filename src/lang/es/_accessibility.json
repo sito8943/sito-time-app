@@ -37,6 +37,10 @@
     "restoreValue": "Vuelve a calcular el valor clickeado",
     "copyToClipboard": "Click para guardar en el portapeles"
   },
-  "errors": {},
-  "messages": {}
+  "errors": {
+    "unknownError": "Ha ocurrido un error"
+  },
+  "messages": {
+    "historyCopied": "Copiado al portapapeles"
+  }
 }
