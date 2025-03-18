@@ -46,7 +46,6 @@ function SumTime() {
   }, [times]);
 
   useEffect(() => {
-    console.log(loadSumFromLocal());
     setTimes(loadSumFromLocal());
   }, []);
 
