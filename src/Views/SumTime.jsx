@@ -84,6 +84,7 @@ function SumTime() {
                 setValue("");
                 setResult("");
                 setTimes([]);
+                saveSumToLocal([])
               }}
               className="button flex-1"
               name={t("_accessibility:buttons.clear")}
