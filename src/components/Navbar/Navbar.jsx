@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getCurrentWindow } from "@tauri-apps/api/window";
+import { useTranslation } from "react-i18next";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +14,8 @@ import { faSquare } from "@fortawesome/free-regular-svg-icons";
 const appWindow = getCurrentWindow();
 
 function Navbar(props) {
+  const { t } = useTranslation();
+
   const { openDrawer } = props;
 
   const init = async () => {};
@@ -62,7 +65,9 @@ function Navbar(props) {
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <h1 className="text-lg text-white pointer-events-none">Time App</h1>
+        <h1 className="text-lg text-white pointer-events-none">
+          {t("_pages:home.appName")}
+        </h1>
       </div>
       <ul className="toolbar flex items-center justify-end">
         <button

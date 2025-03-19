@@ -40,7 +40,9 @@ function Drawer(props) {
           open ? "translate-x-0" : "-translate-x-64"
         } pt-5 w-64 fixed top-0 left-0 z-1 border-r-2 rounded-r-lg border-border bg-drawer-background h-screen animated`}
       >
-        <h2 className="text-xl text-white px-5 pb-5 font-bold poppins">Time App</h2>
+        <h2 className="text-xl text-white px-5 pb-5 font-bold poppins">
+          {t("_pages:home.appName")}
+        </h2>
         <ul className="flex flex-col">
           {sitemap.map((link) => (
             <li
