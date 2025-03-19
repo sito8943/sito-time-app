@@ -47,7 +47,7 @@ function Drawer(props) {
           {sitemap.map((link) => (
             <li
               key={link.name}
-              className={`w-full flex py-2 px-5 hover:bg-alt-background ${
+              className={`w-full flex hover:bg-alt-background ${
                 (link.path ?? `/${link.name}`) === location.pathname
                   ? "bg-alt-background"
                   : ""
@@ -57,7 +57,7 @@ function Drawer(props) {
                 to={link.path ?? `/${link.name}`}
                 name={`_pages:${link.name}.title`}
                 aria-label={t(`_accessibility:ariaLabels.${link.name}`)}
-                className="text-lg text-white flex w-full"
+                className="text-lg text-white flex w-ful py-2 px-5"
               >
                 {t(`_pages:${link.name}.title`)}
               </Link>
