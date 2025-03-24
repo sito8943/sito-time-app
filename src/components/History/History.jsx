@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { sortBy } from "some-javascript-utils/array";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -59,7 +60,7 @@ function History(props) {
           </div>
 
           <ul className="mt-2 history">
-            {history.map((hist, i) => (
+            {sortBy(history, "time", false).map((hist, i) => (
               <li key={i} className="flex gap-1">
                 <button
                   name={t("_accessibility:buttons.restoreValue")}
