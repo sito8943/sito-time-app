@@ -3,37 +3,21 @@ import { sortBy } from "some-javascript-utils/array";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faClipboard } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 // hooks
 import useTimeAge from "../../hooks/useTimeAge";
 
 // utils
 import { saveHistoryToLocal } from "../../utils/localStorage";
-import { useState } from "react";
 
 // components
-import Notification from "../Notification/Notification";
+import HistoryButton from "../HistoryButton/HistoryButton";
 
 function History(props) {
   const { t } = useTranslation();
 
   const { history, setHistory, historyKey, onHistoryClick } = props;
-
-  const [showNotification, setShowNotification] = useState(false);
-  const [notificationType, setNotificationType] = useState();
-  const [notificationMessage, setNotificationMessage] = useState();
-
-  const historyCopySuccessful = () => {
-    setShowNotification(true);
-    setNotificationMessage(t("_accessibility:messages.historyCopied"));
-    setNotificationType("success");
-  };
-  const historyCopyFailed = () => {
-    setShowNotification(true);
-    setNotificationMessage(t("_accessibility:errors.unknownError"));
-    setNotificationType("error");
-  };
 
   const { timeAge } = useTimeAge();
 
@@ -73,35 +57,12 @@ function History(props) {
                 <p className="!text-gray-400">
                   = {hist.result} - {timeAge(hist.time)}
                 </p>
-                <button
-                  onClick={() => {
-                    navigator.clipboard
-                      .writeText(hist.result)
-                      .then(() => {
-                        historyCopySuccessful();
-                      })
-                      .catch((err) => {
-                        historyCopyFailed();
-                      });
-                  }}
-                  name={t("_accessibility:buttons.copyToClipboard")}
-                  aria-label={t("_accessibility:ariaLabels.copyToClipboard")}
-                  className="ml-1 text-primary/40 hover:text-primary"
-                >
-                  <FontAwesomeIcon icon={faClipboard} />
-                </button>
+                <HistoryButton hist={hist} />
               </li>
             ))}
           </ul>
         </div>
       ) : null}
-      <Notification
-        type={notificationType}
-        message={notificationMessage}
-        visible={showNotification}
-        timer={2000}
-        onClose={() => setShowNotification(false)}
-      />
     </>
   );
 }

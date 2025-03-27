@@ -9,6 +9,9 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { sumTimes } from "../utils/utils";
 import { loadSumFromLocal, saveSumToLocal } from "../utils/localStorage";
 
+// components
+import HistoryButton from "../components/HistoryButton/HistoryButton";
+
 function SumTime() {
   const { t } = useTranslation();
 
@@ -84,7 +87,7 @@ function SumTime() {
                 setValue("");
                 setResult("");
                 setTimes([]);
-                saveSumToLocal([])
+                saveSumToLocal([]);
               }}
               className="button flex-1"
               name={t("_accessibility:buttons.clear")}
@@ -119,7 +122,8 @@ function SumTime() {
         ) : null}
       </div>
       <p className="opacity w-full px-5 py-4 bg-alt-background fixed left-0 bottom-0">
-        {t("_pages:sum-time.result")}: {result}
+        {t("_pages:sum-time.result")}: {result}{" "}
+        {!!result ? <HistoryButton hist={{ result }} /> : ""}
       </p>
     </main>
   );
